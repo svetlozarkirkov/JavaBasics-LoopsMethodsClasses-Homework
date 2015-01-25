@@ -64,7 +64,7 @@ public class Problem9_ListOfProducts {
 			scanner.close(); //closing scanner
 			
 		} catch (FileNotFoundException e) { //catching the exception if the file does not exist
-			System.out.println("Error: file not found!"); //printing error message
+			System.out.println("Error: Input.txt not found!"); //printing error message
 			System.exit(-1); //program exit
 		}
 	}

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -23,10 +24,10 @@ public class Problem11_Excel {
 	}
 
 	public static void main(String[] args) throws IOException {
+		try{
 		FileInputStream file = new FileInputStream(new File("Incomes-Report.xlsx")); // opening the file
-				             
-        XSSFWorkbook myWorkBook = new XSSFWorkbook (file); // initializing the file
-       
+		XSSFWorkbook myWorkBook = new XSSFWorkbook (file); // initializing the file
+	       
         XSSFSheet mySheet = myWorkBook.getSheetAt(0); // getting the specific sheet (there's only one here :) )
         
         Iterator<Row> rowIterator = mySheet.iterator(); // initializing iterator from the library
@@ -65,5 +66,10 @@ public class Problem11_Excel {
         System.out.printf("Grand Total -> %.2f\n",grandTotal); // printing it
         myWorkBook.close();
         file.close();
+		}
+		catch (FileNotFoundException e) { //catching the exception if the file does not exist
+			System.out.println("Error: Incomes-Report.xlsx not found!"); //printing error message
+			System.exit(-1); //program exit
+		}  
 	}
 }

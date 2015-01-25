@@ -17,7 +17,7 @@ public class Problem8_SumNumbersFromTextFile {
 			scanner.close();
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("Error");
+			System.out.println("Error: input.txt not found");
 		}
 	}
 }

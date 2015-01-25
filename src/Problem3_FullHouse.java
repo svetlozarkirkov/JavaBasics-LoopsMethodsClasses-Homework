@@ -1,7 +1,7 @@
 
 public class Problem3_FullHouse {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args){
 		String[] faces = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 		char[] suits = {'\u2660','\u2665','\u2666','\u2663'};
 		int count = 0;
@@ -27,6 +27,5 @@ public class Problem3_FullHouse {
 			}
 		}
 		System.out.println("Count = "+count);
-		Thread.sleep(3000);
 	}
 }
