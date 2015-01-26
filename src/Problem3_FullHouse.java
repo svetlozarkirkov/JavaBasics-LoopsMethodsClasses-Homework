@@ -26,6 +26,6 @@ public class Problem3_FullHouse {
 				}
 			}
 		}
-		System.out.println("Count = "+count);
+		System.out.println(count+ " full houses");
 	}
 }
