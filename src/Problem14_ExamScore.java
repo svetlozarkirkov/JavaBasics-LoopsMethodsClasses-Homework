@@ -31,7 +31,6 @@ public class Problem14_ExamScore {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		ArrayList<String> inputs = new ArrayList<String>();
 		for (int i = 0; i < 3; i++){
 			input.nextLine();
 		}
@@ -87,11 +86,11 @@ public class Problem14_ExamScore {
 					stCount--;
 				}
 				else {
-					//System.out.print(students.get(j).getName());
 					System.out.printf("]; avg=%.2f\n",(total.divide(count,2,RoundingMode.HALF_UP)));
 				}
 			}
 			
 		}
+		input.close();
 	}
 }
